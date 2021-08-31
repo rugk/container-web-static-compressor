@@ -5,8 +5,7 @@ on:
   #  - cron: '25 9 * * *'
   push:
     branches:
-      # - 'main'
-      - '**'
+      - 'main'
     # Publish semver tags as releases.
     tags:
       - 'v*.*.*'
@@ -37,7 +36,6 @@ jobs:
           # generate Docker tags based on the following events/attributes
           tags: |
             type=schedule
-            type=ref,event=branch
             type=ref,event=pr
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
