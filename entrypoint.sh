@@ -25,7 +25,7 @@ find . -type f -exec zstd -z -f -19 --threads=0 {} +
 gzipper compress --level 9 --remove-larger --exclude 'gz,br,zst' "$targetDir"
 gzipper compress --level 9 --brotli --remove-larger --exclude 'gz,br,zst' "$targetDir"
 
-echo "Compression finisedh. Result:"
+echo "Compression finised. Result:"
 ls -la "$targetDir"
 
 echo "Process finished."
